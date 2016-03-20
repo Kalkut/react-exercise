@@ -1,0 +1,10 @@
+.text {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #FF0000;
+}
+
+.app{
+    width: 100%;
+    height: 100%;
+}

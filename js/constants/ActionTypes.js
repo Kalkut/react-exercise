@@ -1,0 +1,3 @@
+export const DATA_FETCHING = 'DATA_FETCHING';
+export const DATA_FETCHED = 'DATA_FETCHED';
+export const COMMENT_SUBMITED = 'COMMENT_SUBMITED';

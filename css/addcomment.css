@@ -1,0 +1,39 @@
+.menu{
+    width: 20%;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: #2D353D;
+    box-shadow: -2px 0 7px 0 rgba(0, 0, 0, 0.5)
+}
+
+.input{
+    width: calc(100% - 20px);
+    height: 32px;
+    margin: 10px 0 0 7px;
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.txtarea{
+    width: calc(100% - 20px);
+    height: 135px;
+    margin: 10px 0 0 7px;
+    resize: none;
+}
+
+.submit{
+    width: calc(100% - 20px);
+    height: 32px;
+    margin: 10px 0 0 7px;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #FFF;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.submit:hover{
+    background-color: #00897B;
+}

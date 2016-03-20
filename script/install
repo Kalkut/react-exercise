@@ -1,0 +1,3 @@
+#!/bin/bash
+
+npm install --python=python2.7
