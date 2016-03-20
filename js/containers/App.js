@@ -5,6 +5,7 @@ import Home from '../components/Home';
 import {renderDevTools} from '../utils/devTools';
 import styles from '../../css/main.css';
 
+// The store of the app
 const store = configureStore();
 
 export default React.createClass({
@@ -12,13 +13,13 @@ export default React.createClass({
     return (
       <div className={styles.main}>
 
-        {/* <Home /> is your app entry point */}
+        {/* <Home /> is the app entry point */}
         <Provider store={store}>
           <Home />
         </Provider>
 
         {/* only renders when running in DEV mode */
-          // renderDevTools(store)
+          renderDevTools(store)
         }
       </div>
     );

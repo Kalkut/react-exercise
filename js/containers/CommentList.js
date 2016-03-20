@@ -5,11 +5,13 @@ import Comment from '../components/Comment.js';
 import * as actions from '../actions/AsyncActions.js'
 import styles from '../../css/commentList.css';
 
+// Map data and dispach to the component properties
 const mapStateToProps = (state) => {
   return {
     comments: state.Sample.comments,
     fetching: state.Sample.fetching,
-    success: state.Sample.success
+    success: state.Sample.success,
+    failure: state.Sample.failure
   }
 }
 
@@ -18,42 +20,54 @@ const mapDispatchToProps = (dispatch) => {
     onDataFetched : (comments) => {
       dispatch(actions.loadComments(comments));
     },
+    onDataFailure : () => {
+      dispatch(actions.failedFetching())
+    },
     startFetching : () => {
       dispatch(actions.fetching());
     }
   }
 }
 
-let CommentList = ({comments, fetching, success, onDataFetched, startFetching }) => {
+// Properties returned by mapStateTopros/mapDispatchToPros are accessible
+let CommentList = ({comments, fetching, success, failure, onDataFetched, startFetching, onDataFailure }) => {
 
-  if(!fetching && !success){
+  // Request handling
+  if(!fetching && !success && !failure){
     startFetching();
     
     request
       .get('/comments')
       .end(function (err, res){
-        if(err) return console.error(err);
+        if(err) {
+          onDataFailure();
+          return err; // It's going to happen if you don't have mongo : no log
+        }
         onDataFetched(res.body);
       })
   }
 
+  // Template
   return (
       <div className={styles.comments}>
         { 
-          comments.map( (o, i) =>
-            <Comment
-              key={i}
-              username={o.username}
-              creationDate={o.creationDate}
-              email={o.email}
-              content={o.content}
-            ></Comment>
-          )
+          comments
+            .map( (o, i) =>
+              <Comment
+                key={i}
+                username={o.username}
+                creationDate={o.creationDate}
+                email={o.email}
+                content={o.content}
+              ></Comment>
+            )
+            .reverse()
         }
       </div>
   )
 }
 
+// Connexion
 CommentList = connect(
   mapStateToProps,
   mapDispatchToProps

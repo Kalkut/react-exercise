@@ -1,3 +1,4 @@
 export const DATA_FETCHING = 'DATA_FETCHING';
 export const DATA_FETCHED = 'DATA_FETCHED';
+export const DATA_FAILURE = 'DATA_FAILURE';
 export const COMMENT_SUBMITED = 'COMMENT_SUBMITED';

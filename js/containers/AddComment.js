@@ -3,22 +3,23 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/AddCommentActions'
 import styles from '../../css/addcomment.css';
 
+
+
 let AddComment = ({ dispatch }) => {
-    let username = '', email = '', content = '';
-    let userInput, emailInput, contentInput;
+    let userInput, emailInput, contentInput; // here for refs
 
     return (
         <div className={styles.menu}>
             <form
                 onSubmit={ (e) => {
-                    e.preventDefault();
+                    e.preventDefault(); // Default behaviour reload the page
                     let newComment = {
                         creationDate: Date.now(),
                         username: userInput.value,
                         email: emailInput.value,
                         content: contentInput.value
                     }
-                    dispatch(actions.submitComment(newComment));
+                    dispatch(actions.submitComment(newComment)); // God I love Redux
                     userInput.value = emailInput.value = contentInput.value = '';
                 }}
             >

@@ -1,16 +1,23 @@
 .comment{
-    width: 200px;
-    height: 300px;
+    width: 100%;
+    height: 100px;
     float: left;
     margin-left: 7px;
     margin-top: 7px;
     position: relative;
-    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5)
+    box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 a{
     color: #b1b1b1;
     text-decoration: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    line-height: 32px !important;
+    text-align: center;
+    top: 0;
+    left: 0;
 }
 
 .body{
@@ -24,13 +31,14 @@ a{
 .email{
     float: left;
     box-sizing: border-box;
-    width: 100%;
+    width: 50%;
     height: 32px;
     color: #b1b1b1;
+    position: relative;
 }
 
 .email:hover{
-    background-color: #00897B;
+    background-color: #388E3C;
     cursor: pointer;
 }
 
@@ -43,7 +51,7 @@ a{
     height: 32px;
     float: left;
     line-height: 32px;
-    text-align: center;
+    position: relative;
 }
 
 .mailMsg{
@@ -52,23 +60,27 @@ a{
     height: 32px;
     float: left;
     line-height: 32px;
+    position: relative;
 }
 
-.footer{
-    height: 20%;
-    width: 100%;
+.now{
+    height: 32px;
+    width: 50%;
     float: left;
-    background-color: #2D353D;
+    background-color: #025D8C;
 }
 
 .username{
     box-sizing: border-box;
-    height: 100%;
+    height: 32px;
+    line-height: 32px;
     width: 66%;
     color: #F1F1F1;
-    padding: 10px 0 0 5px;
     float: left;
-    overflow-y: hidden; 
+    padding-left: 5px;
+    display: block;
+    word-wrap: normal;
+    text-overflow: ellipsis;
 }
 
 .date{
@@ -81,28 +93,27 @@ a{
 
 .day{
     float: left;
-    height: 66%;
-    width: 100%;
-    font-size: 23px;
-    text-align: center;
-    padding-top: 10px;
-    box-sizing: border-box;
-}
-
-.time{
-    box-sizing: border-box;
-    float: left;
-    height: 34%;
+    height: 18px;
     width: 100%;
     font-size: 12px;
     text-align: center;
-    padding-bottom: 4px;
+    box-sizing: border-box;
+    line-height: 18px;
+}
+
+.time{
+    float: left;
+    height: 14px;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 14px;
 }
 
 .content{
     background-color: #FAFAFA;
     width: 100%;
-    height: calc(100% - 32px);
+    height: 68px;
     float: left;
     box-sizing: border-box;
     padding: 10px;

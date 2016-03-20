@@ -6,21 +6,10 @@ import Comment from './Comment.js';
 import AddComment from '../containers/AddComment.js';
 import CommentList from '../containers/CommentList.js';
 
+
+// Trivial
 class Home extends Component {
   render() {
-
-    var berny = [{
-      username: 'Rachel',
-      creationDate: Date.now(),
-      email: 'Rachel@gmail.com',
-      content: 'Hello guys ! Glad to meet you <3'
-    }, {
-      username: 'Bobby',
-      creationDate: Date.now(),
-      email: 'Bobby@mechanic-plumber.com',
-      content: 'Though I was not going to take part to the party eh ?'
-    }];
-
     return (
       <div className={styles.app}>
         <CommentList></CommentList>

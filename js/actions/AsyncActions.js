@@ -1,4 +1,4 @@
-import {DATA_FETCHED, DATA_FETCHING} from '../constants/ActionTypes';
+import {DATA_FETCHED, DATA_FETCHING, DATA_FAILURE} from '../constants/ActionTypes';
 
 export function loadComments(comments) {
     return {
@@ -10,5 +10,11 @@ export function loadComments(comments) {
 export function fetching() {
     return {
         type: DATA_FETCHING
+    }
+}
+
+export function failedFetching() {
+    return {
+        type: DATA_FAILURE
     }
 }

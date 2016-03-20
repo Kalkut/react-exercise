@@ -3,15 +3,19 @@
     height: 100%;
     float: left;
     position: relative;
-    background-color: #2D353D;
-    box-shadow: -2px 0 7px 0 rgba(0, 0, 0, 0.5)
+    box-sizing: border-box;
+    padding: 12px;
 }
 
 .input{
     width: calc(100% - 20px);
     height: 32px;
     margin: 10px 0 0 7px;
-    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+    border: 0;
+    padding-left: 5px;
+    background: #FFF;
+    outline: none;
+    box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .txtarea{
@@ -19,21 +23,28 @@
     height: 135px;
     margin: 10px 0 0 7px;
     resize: none;
+    border: 0;
+    padding-left: 5px;
+    background: #FFF;
+    box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.5);
+    outline: none;
 }
 
 .submit{
-    width: calc(100% - 20px);
+    width: calc(100% - 13px);
     height: 32px;
     margin: 10px 0 0 7px;
     font-family: 'Roboto', sans-serif;
-    background-color: transparent;
-    border: 1px solid #ccc;
+    background-color: #025D8C;
     color: #FFF;
     font-weight: bolder;
     cursor: pointer;
-    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border: 0;
+    box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .submit:hover{
-    background-color: #00897B;
+    background-color: #388E3C;
+    color: #FFF;
 }
