@@ -15,7 +15,7 @@ $ script/install
 or
 
 ```bash
-$ mongod
+$ git clone git@github.com:Kalkut/react-exercise.git && cd react-exercise
 $ npm install
 ```
 
