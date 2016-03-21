@@ -1,7 +1,7 @@
 # Commenting Redux Web App
 > Technical exercise done in less than a day for an interview
 
-This is a commenting web app done with React/Redux on the client side and Node.js / MongoDB on the server-side. You can check it on bmakita.evennde.com.
+This is a commenting web app done with React/Redux on the client side and Node.js / MongoDB on the server-side. You can check it on http://www.bmakita.evennode.com.
 
 ## Install this project
 
